@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Manual Workflow
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -31,11 +31,13 @@ on:
           - User2
         default: User1
 
+run-name: Manual Workflow
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
   common-part:
-    uses: ./Common/action.yml@main
+    uses: ./Common/action.yml@dev
     with:
       Environment: ${{ inputs.Environment }}
       User: ${{ inputs.User }}
