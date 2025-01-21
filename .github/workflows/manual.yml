@@ -39,7 +39,6 @@ jobs:
   common-part:
     uses: action@main
     with:
-      Environment: ${{ inputs.Environment }}
       User: ${{ inputs.User }}
 
   greet:
@@ -53,4 +52,4 @@ jobs:
       run: |
         echo "Hello ${{ inputs.name }}"
         echo "Environment: ${{ inputs.Environment }}"
-        echi "User: ${{ inputs.User }}"
+        echo "User: ${{ inputs.User }}"
