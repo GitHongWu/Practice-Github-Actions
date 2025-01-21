@@ -37,7 +37,7 @@ run-name: Manual Workflow
 jobs:
   # This workflow contains a single job called "greet"
   common-part:
-    uses: ./Common/action.yml@dev
+    uses: GitHongWu/Practice-Github-Actions/Common@main
     with:
       Environment: ${{ inputs.Environment }}
       User: ${{ inputs.User }}
