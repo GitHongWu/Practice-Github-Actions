@@ -40,6 +40,7 @@ jobs:
     uses: ./.github/workflows/action.yml
     with:
       User: ${{ inputs.User }}
+      Environment: ${{ inputs.Environment }}
 
   greet:
     # The type of runner that the job will run on

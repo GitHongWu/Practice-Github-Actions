@@ -2,9 +2,9 @@ name: Common Workflow
 on:
   workflow_call:
     inputs:
-      # Environment:
-      #   required: true
-      #   type: environment
+      Environment:
+        required: true
+        type: environment
       User:
         type: string
         required: true
@@ -12,9 +12,10 @@ on:
 jobs:
   common-steps:
     runs-on: ubuntu-latest
-    # environment: ${{ inputs.Environment }}
+    environment: ${{ inputs.Environment }}
 
     steps:
     - name: Common step1
       run: |
         echo "Common User: ${{ inputs.User }}"
+        echo "Common Environment: ${{ inputs.Environment }}"
