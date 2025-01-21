@@ -3,8 +3,8 @@ on:
   workflow_call:
     inputs:
       Environment:
-        type: environment
         required: true
+        type: environment
       User:
         type: string
         required: true
