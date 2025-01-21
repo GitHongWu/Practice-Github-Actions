@@ -21,3 +21,4 @@ jobs:
       run: |
         echo "Common User: ${{ inputs.User }}"
         echo "Common Environment: ${{ inputs.Environment }}"
+        echo "Common Environment: ${{ inputs.name }}"
