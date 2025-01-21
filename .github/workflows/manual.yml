@@ -37,7 +37,7 @@ run-name: Manual Workflow
 jobs:
   # This workflow contains a single job called "greet"
   common-part:
-    uses: action.yml
+    uses: action@main
     with:
       Environment: ${{ inputs.Environment }}
       User: ${{ inputs.User }}
