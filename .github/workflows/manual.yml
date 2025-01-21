@@ -35,7 +35,7 @@ on:
 jobs:
   # This workflow contains a single job called "greet"
   common-part:
-    uses: ./../../Common/action.yml
+    uses: ./../../Common/action.yml@main
     with:
       Environment: ${{ inputs.Environment }}
       User: ${{ inputs.User }}
