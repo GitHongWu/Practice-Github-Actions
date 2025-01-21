@@ -1,0 +1,23 @@
+name: Common Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      Environment:
+        type: environment
+        required: true
+      User:
+        type: string
+        required: true
+    secrets: inherit
+
+jobs:
+  common-steps:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.Environment }}
+
+    steps:
+    - name: Common step1
+      run: |
+        echo "Common Hello ${{ inputs.name }}"
+        echo "Common Environment: ${{ inputs.Environment }}"
+        echi "Common User: ${{ inputs.User }}"

@@ -18,9 +18,28 @@ on:
         # The data type of the input
         type: string
 
+      Environment:
+        description: "env var"
+        type: environment
+        required: true
+        default: dev
+      User:
+        type: choice
+        required: true
+        options:
+          - User1
+          - User2
+        default: User1
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
+  common-part:
+    uses: ./../../Common/action.yml
+    with:
+      Environment: ${{ inputs.Environment }}
+      User: ${{ inputs.User }}
+
   greet:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -29,4 +48,7 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "Hello ${{ inputs.name }}"
+      run: |
+        echo "Hello ${{ inputs.name }}"
+        echo "Environment: ${{ inputs.Environment }}"
+        echi "User: ${{ inputs.User }}"
