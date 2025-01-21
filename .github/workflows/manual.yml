@@ -37,7 +37,7 @@ run-name: Manual Workflow
 jobs:
   # This workflow contains a single job called "greet"
   common-part:
-    uses: ./.github/workflows/action
+    uses: ./.github/workflows/action.yml
     with:
       User: ${{ inputs.User }}
 
