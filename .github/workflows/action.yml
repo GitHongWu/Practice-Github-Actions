@@ -4,10 +4,12 @@ on:
     inputs:
       Environment:
         required: true
-        type: environment
+        type: string
       User:
         type: string
         required: true
+      name:
+        type: string
 
 jobs:
   common-steps:

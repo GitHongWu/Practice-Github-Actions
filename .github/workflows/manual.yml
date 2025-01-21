@@ -17,7 +17,6 @@ on:
         required: true
         # The data type of the input
         type: string
-
       Environment:
         description: "env var"
         type: environment
@@ -41,6 +40,7 @@ jobs:
     with:
       User: ${{ inputs.User }}
       Environment: ${{ inputs.Environment }}
+      name: ${{ inputs.name }}
 
   greet:
     # The type of runner that the job will run on
